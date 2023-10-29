@@ -1,0 +1,691 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modern</title>
+</head>
+<body>
+    <style>
+        body{background-color:rgb(15, 88, 117);}
+        
+        * {
+          box-sizing: border-box;
+          margin: 0; padding: 0;
+        }
+
+       .row{
+        display: flex; flex-direction: column;  justify-content: center; align-items: center; margin: 10px; 
+       }
+       .row .column{
+        display: flex; flex-direction: row;  justify-content: space-between; align-items: flex-start;
+       }
+      .column img{padding-bottom: 15px;}
+       .c{margin-right: 15px;}
+        
+        /* The Modal (background) */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgb(48, 170, 192);
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          width: 90%;
+          max-width: 1200px;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: white;
+          position: absolute;
+          top: 10px;
+          right: 25px;
+          font-size: 35px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #999;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        .mySlides {
+          display: none;
+        }
+        
+        .cursor {
+          cursor: pointer;
+        }
+        
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: rgb(15, 88, 117);
+          font-weight: bold;
+          font-size: 25px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgb(48, 170, 192);
+        }
+        
+        
+        
+        img {
+          margin-bottom: -4px;
+        }
+        
+        .caption-container {
+          text-align: center;
+          background-color: rgb(15, 88, 117);
+          padding: 2px 16px;
+          color: white;
+        }
+        
+        .demo {
+          opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+        
+        img.hover-shadow {
+          transition: 0.3s;
+        }
+        
+        .hover-shadow:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .note{font: size 14px; ; color: #fefefe; margin: 20px; display: block;}
+        </style>
+         <span class="note">these are just examples , we plan any design you want </span>
+        
+        
+        
+        <div class="row">
+         <div class="column">
+          <div class="c">
+            <img src="photo_9_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          
+<img src="photo_10_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+
+<img src="photo_11_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+
+<img src="photo_12_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+
+<img src="photo_13_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+
+<img src="photo_14_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+
+<img src="photo_15_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+
+<img src="photo_16_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+
+<img src="photo_17_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+
+<img src="photo_18_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+
+<img src="photo_19_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+
+<img src="photo_1_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+
+<img src="photo_2023-10-29_17-22-42.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+
+<img src="photo_20_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+
+<img src="photo_21_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+
+<img src="photo_22_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+
+<img src="photo_23_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+
+<img src="photo_24_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+
+<img src="photo_25_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+
+<img src="photo_26_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+
+<img src="photo_27_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+
+<img src="photo_28_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
+</div>
+<div class="c">
+<img src="photo_29_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
+
+<img src="photo_2_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
+
+<img src="photo_30_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(25)" class="hover-shadow cursor">
+
+<img src="photo_31_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
+
+<img src="photo_32_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(27)" class="hover-shadow cursor">
+
+<img src="photo_33_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(28)" class="hover-shadow cursor">
+
+<img src="photo_34_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(29)" class="hover-shadow cursor">
+
+<img src="photo_35_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(30)" class="hover-shadow cursor">
+
+<img src="photo_36_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(31)" class="hover-shadow cursor">
+
+<img src="photo_37_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(32)" class="hover-shadow cursor">
+
+
+
+<img src="photo_38_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(33)" class="hover-shadow cursor">
+
+<img src="photo_39_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(34)" class="hover-shadow cursor">
+
+<img src="photo_3_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(35)" class="hover-shadow cursor">
+
+<img src="photo_40_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(36)" class="hover-shadow cursor">
+
+<img src="photo_41_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(37)" class="hover-shadow cursor">
+
+<img src="photo_42_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(38)" class="hover-shadow cursor">
+
+<img src="photo_43_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(39)" class="hover-shadow cursor">
+
+<img src="photo_44_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(40)" class="hover-shadow cursor">
+
+<img src="photo_45_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(41)" class="hover-shadow cursor">
+<img src="photo_46_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor">
+<img src="photo_47_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(43)" class="hover-shadow cursor">
+
+<img src="photo_48_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(44)" class="hover-shadow cursor">
+</div>
+<div class="c">
+<img src="photo_49_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(45)" class="hover-shadow cursor">
+
+<img src="photo_4_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(46)" class="hover-shadow cursor">
+
+<img src="photo_50_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(47)" class="hover-shadow cursor">
+
+<img src="photo_51_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(48)" class="hover-shadow cursor">
+
+<img src="photo_52_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(49)" class="hover-shadow cursor">
+
+<img src="photo_53_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(50)" class="hover-shadow cursor">
+
+<img src="photo_54_2023-10-29_17-18-21.jpg" style="width:100%" onclick="openModal();currentSlide(51)" class="hover-shadow cursor">
+
+<img src="photo_55_2023-10-29_17-18-21.jpg" style="width:100%" onclick="openModal();currentSlide(52)" class="hover-shadow cursor">
+
+<img src="photo_56_2023-10-29_17-18-21.jpg" style="width:100%" onclick="openModal();currentSlide(53)" class="hover-shadow cursor">
+
+
+
+<img src="photo_2023-10-29_18-35-58.jpg" style="width:100%" onclick="openModal();currentSlide(54)" class="hover-shadow cursor">
+
+<img src="photo_2023-10-29_18-36-09.jpg" style="width:100%" onclick="openModal();currentSlide(55)" class="hover-shadow cursor">
+
+<img src="photo_2023-10-29_18-36-20.jpg" style="width:100%" onclick="openModal();currentSlide(56)" class="hover-shadow cursor">
+
+<img src="photo_2023-10-29_18-36-28.jpg" style="width:100%" onclick="openModal();currentSlide(57)" class="hover-shadow cursor">
+
+<img src="photo_2023-10-29_18-36-41.jpg" style="width:100%" onclick="openModal();currentSlide(58)" class="hover-shadow cursor">
+
+<img src="photo_2023-10-29_18-36-47.jpg" style="width:100%" onclick="openModal();currentSlide(59)" class="hover-shadow cursor">
+
+<img src="photo_2023-10-29_18-37-10.jpg" style="width:100%" onclick="openModal();currentSlide(60)" class="hover-shadow cursor">
+
+<img src="photo_2023-10-29_18-37-21.jpg" style="width:100%" onclick="openModal();currentSlide(61)" class="hover-shadow cursor">
+
+<img src="photo_5_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(62)" class="hover-shadow cursor">
+
+<img src="photo_6_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(63)" class="hover-shadow cursor">
+
+<img src="photo_7_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(64)" class="hover-shadow cursor">
+ <img src="photo_8_2023-10-29_17-18-20.jpg" style="width:100%" onclick="openModal();currentSlide(65)" class="hover-shadow cursor">
+             
+          </div>
+        </div>
+        </div>
+        
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+        
+            <div class="mySlides">
+              
+              <img src="photo_9_2023-10-29_17-18-20.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+              
+              <img src="photo_10_2023-10-29_17-18-20.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+              
+              <img src="photo_11_2023-10-29_17-18-20.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides">
+              
+              <img src="photo_12_2023-10-29_17-18-20.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                
+                <img src="photo_13_2023-10-29_17-18-20.jpg" style="width:100%">
+              </div>
+              
+            <div class="mySlides">
+                
+              <img src="photo_14_2023-10-29_17-18-20.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                
+                <img src="photo_15_2023-10-29_17-18-20.jpg" style="width:100%">
+              </div>
+              <div class="mySlides">
+                  
+                  <img src="photo_16_2023-10-29_17-18-20.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    
+                    <img src="photo_17_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div>
+                  <div class="mySlides">
+                    
+                    <img src="photo_18_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_19_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_1_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                      <img src="photo_2023-10-29_17-22-42.jpg" style="width:100%">
+                    </div> 
+
+                    <div class="mySlides">
+                    <img src="photo_20_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_21_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_22_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_23_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_24_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div>
+                  <div class="mySlides">
+                    
+                    <img src="photo_25_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div>  <div class="mySlides">
+                    
+                    <img src="photo_26_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div>  <div class="mySlides">
+                    
+                    <img src="photo_27_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_28_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_29_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_2_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_30_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_31_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_32_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_33_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_34_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_35_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_36_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_37_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> 
+                  <div class="mySlides">
+                    
+                    <img src="photo_38_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> 
+                  <div class="mySlides">
+                    
+                    <img src="photo_39_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_3_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div><div class="mySlides">
+                    
+                    <img src="photo_40_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_41_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_42_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_43_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_44_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_45_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_46_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_47_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_48_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_49_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_4_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_50_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_51_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_52_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_53_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_54_2023-10-29_17-18-21.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_55_2023-10-29_17-18-21.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_56_2023-10-29_17-18-21.jpg" style="width:100%">
+                  </div>  <div class="mySlides">
+                    
+                    <img src="photo_2023-10-29_18-35-58.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_2023-10-29_18-36-09.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_2023-10-29_18-36-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_2023-10-29_18-36-28.jpg" style="width:100%">
+                  </div> 
+                  <div class="mySlides">
+                    
+                    <img src="photo_2023-10-29_18-36-41.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_2023-10-29_18-36-47.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_2023-10-29_18-37-10.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_2023-10-29_18-37-21.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_5_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_6_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> 
+                  <div class="mySlides">
+                    
+                    <img src="photo_7_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> <div class="mySlides">
+                    
+                    <img src="photo_8_2023-10-29_17-18-20.jpg" style="width:100%">
+                  </div> 
+
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+        
+        
+            <!-- <div class="column">
+              <img class="demo cursor" src="photo_2_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo_3_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo_4_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="photo_5_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="photo_6_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="photo_7_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_8_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(7)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_9_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(8)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_10_2023-10-16_22-22-27.jpg" style="width:100%" onclick="currentSlide(9)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_10_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(10)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_11_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(11)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_12_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(12)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_13_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(13)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_14_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(14)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_15_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(15)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_16_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(16)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_17_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(17)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_18_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(18)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_19_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(19)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_1_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(20)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_20_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(21)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_21_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(22)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_22_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(23)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_23_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(24)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_24_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(25)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_25_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(26)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_26_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(27)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_27_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(28)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_28_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(29)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_29_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(30)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_2_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(31)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_30_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(32)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_31_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(33)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_32_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(34)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_33_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(35)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_34_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(36)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_35_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(37)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_36_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(38)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_37_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(39)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_38_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(40)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_39_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(41)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_3_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(42)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_40_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(43)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_41_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(44)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_42_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(45)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_43_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(46)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_44_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(47)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_45_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(48)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_46_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(49)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_47_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(50)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_48_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(51)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_49_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(52)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_4_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(53)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_50_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(54)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_51_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(55)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_52_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(56)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_53_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(57)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_54_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(58)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_55_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(59)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_56_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(60)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_5_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(61)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_6_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(62)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_7_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(63)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_8_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(64)" alt="">
+              </div><div class="column">
+                <img class="demo cursor" src="photo_9_2023-10-23_20-23-58.jpg" style="width:100%" onclick="currentSlide(65)" alt="">
+              </div> -->
+          </div>
+        </div>
+        
+        <script>
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+            
+       
+        
+</body>
+</html>
