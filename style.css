@@ -1,0 +1,79 @@
+body{background-image:url(back.jpg); background-attachment: fixed;
+background-repeat: no-repeat; background-size:100%; background-size: cover; }
+
+.corner{float: right; display:block; position: sticky; right: 0px; top: 0px;}
+
+@font-face {font-family:english;
+    src: url(Tropical\ Qebalon\ Serif.otf);}
+
+
+.h{margin: 0 auto;  width:fit-content;  font-size: 50px; display: block; font-family: english; }
+
+.start{font-size: 25px; color: azure;}
+::marker{color: black;}
+.start1{background-color: rgb(8, 81, 99); padding: 20px; width:100%; height:fit-content; display: block;}
+.bodlink{color: rgba(28, 201, 28, 0.897);} .bodlink:active{color: blueviolet;}
+.bodlink1{color:darkred;} .bodlink1:active{color: blueviolet;}
+
+
+.footer{background-color:rgb(8, 81, 99); color: azure; padding: 20px; width: 100%;}
+.phonenumber{color: azure; text-decoration: none; } 
+.phonenumber:hover{text-decoration-line: underline; color: black;}
+
+
+
+.a3{margin:0 auto; display: block; margin-top: 100px; height: 765px; width: 712.5px; 
+    border-radius: 7px; }
+.a3:hover{ opacity: 80%; }
+    .p3{margin: 0 auto; color:rgb(255, 255, 255); font-size: 25px; display: block; font-style:italic; letter-spacing: 1.5px;
+         width: 675.5px;  border-radius: 7px; margin-top: -10px;  text-decoration: none;
+        padding: 18px; background-color: rgb(8, 81, 99)} 
+    .p3:hover{background-color: rgb(48, 170, 192); }
+    
+
+
+    .a4{margin:0 auto; display: block; margin-top: 100px; height: 765px; width: 712.5px;
+        border-radius: 7px;  }
+        .a4:hover:hover{ opacity: 80%; }
+        .p4{margin: 0 auto; color:rgb(255, 255, 255); font-size: 25px; display: block; font-style:italic; letter-spacing: 1.5px;
+             width:  675.5px;  border-radius: 7px; margin-top: -10px;  text-decoration: none;
+            padding: 18px; background-color: rgb(8, 81, 99)} 
+        .p4:hover{background-color: rgb(48, 170, 192); }
+        
+
+
+.a1{margin:0 auto; display: block; margin-top: 100px; height: 765px; width: 712.5px; 
+border-radius: 7px; }
+.a1:hover{ opacity: 80%; }
+.p1{margin: 0 auto; color:rgb(255, 255, 255); font-size: 25px; display: block; font-style:italic; letter-spacing: 1.5px;
+     width:  675.5px;  border-radius: 7px; margin-top: -10px;  text-decoration: none;
+    padding: 18px; background-color: rgb(8, 81, 99)} 
+.p1:hover{background-color: rgb(48, 170, 192); }
+
+
+
+
+.a2{margin:0 auto; display: block; margin-top: 50px; height: 765px; width: 712.5px; 
+    border-radius: 7px;}
+.a2:hover{ opacity: 80%; }
+.p2{margin: 0 auto; color:rgb(255, 255, 255); font-size: 25px; display: block; font-style:italic; letter-spacing: 1.5px;
+    width:  675.5px;  border-radius: 7px; margin-top: -10px;  text-decoration: none;
+   padding: 18px; background-color: rgb(8, 81, 99)}
+.p2:hover{background-color:rgb(48, 170, 192); }
+
+
+
+
+
+.S{ position:sticky; bottom: 100px; left:25px; }
+.whatsapp{transition: 0.3s;}
+.whatsapp:hover{cursor:pointer; transform:translateY(-7px)}
+
+
+.S1{position:sticky; bottom:80px; left:90px; 
+    font-size: 25px; font-style: oblique; text-decoration: none; color: white;
+ background-color: green; border-radius: 30px; padding: 10px; width:fit-content;}
+ 
+.S2{position:sticky; bottom:130px; left:90px; 
+    font: size 25px; font-style: oblique; text-decoration: none; color: rgb(255, 255, 255);
+ background-color: rgb(173, 17, 17); border-radius: 30px; padding: 10px; width:fit-content;}
